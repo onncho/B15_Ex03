@@ -11,18 +11,16 @@ namespace Ex03.GarageLogic
         enum BikeLicenseType { A, A2, AB, B1 };
         BikeLicenseType m_bikeLicenseType;
 
-        string m_wheelManufactureName;
         int m_bikeEngineVolume;
 
-        public Bike(BikeLicenseType i_bikeLiensetype, int i_bikeEngineVolume, string i_wheelMaufactureName)
+        public Bike(BikeLicenseType i_bikeLiensetype, int i_bikeEngineVolume, string i_wheelMaufactureName, string i_bikeLicenseNumber, Engine i_engine) 
+            : base("bike", i_bikeLicenseNumber, 8.0, 8.0, Vehicle.createWheels(2, i_wheelMaufactureName, 34), i_engine)
         {
             m_bikeEngineVolume = i_bikeEngineVolume;
             m_bikeLicenseType = i_bikeLiensetype;
-            m_wheelManufactureName = i_wheelMaufactureName;
             
             //create wheel
-            Vehicle.createWheels(2, m_wheelManufactureName  ,34);
-            base("bike", i_licenceNumber, 8.0, new List)
+            
         }
 
     }
