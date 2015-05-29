@@ -5,23 +5,53 @@ using System.Text;
 namespace Ex03.GarageLogic
 {
     // need to put here arguments but who gonna give it? 
-    class Vehicle : Wheel(//HERE//)
+    class Vehicle
     {
-
-        private String m_vehicleName;
-        private String m_licenceNumber;
         private float m_reaminingEng;
+        private String m_vehicleName, m_licenceNumber;
         private List<Wheel> m_vehicleWheels;
+        private Engine m_vehicleSystem;
 
-        public Vehicle(String m_vehicleName, String m_licenceNumber, float m_reaminingEng, List<Wheel> m_vehicleWheels)
+
+        public Vehicle(String i_vehicleName, String i_licenceNumber, float i_reaminingEng, float i_maxEnergy, List<Wheel> i_vehicleWheels, Engine i_vehicleSystem)
         {
-            this.m_vehicleName = m_vehicleName;
-            this.m_licenceNumber = m_licenceNumber;
-            this.m_reaminingEng = m_reaminingEng;
-            this.m_vehicleWheels = m_vehicleWheels;
+            this.m_vehicleName = i_vehicleName;
+            this.m_licenceNumber = i_licenceNumber;
+        
+            this.m_reaminingEng = i_reaminingEng;
 
+
+            this.m_vehicleWheels = i_vehicleWheels;
+
+            m_vehicleSystem = i_vehicleSystem;
         }
 
+        public float ReaminingEng
+        {
+            get { return m_reaminingEng; }
+            set { m_reaminingEng = value; }
+        }
+
+        internal List<Wheel> VehicleWheels
+        {
+            get { return m_vehicleWheels; }
+            set { m_vehicleWheels = value; }
+        }
+
+        public String VehicleName
+        {
+            get { return m_vehicleName; }
+            set { m_vehicleName = value; }
+        }
+
+        public String LicenceNumber
+        {
+            get { return m_licenceNumber; }
+            set { m_licenceNumber = value; }
+        }
+
+        
+      
 
     }
 }

@@ -7,16 +7,16 @@ namespace Ex03.GarageLogic
     class Wheel
     {
 
-        private String m_manufactureName;
+        private string m_manufactureName;
         private float m_currentAirPressure;
         private float m_maxAirPressure;
 
 
-        public Wheel(String m_manufactureName, float m_currentAirPressure, float m_maxAirPressure)
+        public Wheel(string i_manufactureName, float i_currentAirPressure, float i_maxAirPressure)
         {
-            this.m_manufactureName = m_manufactureName;
-            this.m_currentAirPressure = m_currentAirPressure;
-            this.m_maxAirPressure = m_maxAirPressure;
+            this.m_manufactureName = i_manufactureName;
+            this.m_currentAirPressure = i_currentAirPressure;
+            this.m_maxAirPressure = i_maxAirPressure;
         }
 
 
@@ -24,7 +24,7 @@ namespace Ex03.GarageLogic
         {
             float returnPressure = 0;
 
-            //check if the pressure already in Maxs
+            
             if (m_currentAirPressure == m_maxAirPressure) {
                 returnPressure = m_maxAirPressure;
             }
@@ -42,7 +42,7 @@ namespace Ex03.GarageLogic
         }
 
 
-        public String getWheelName()
+        public string getWheelName()
         {
             return this.m_manufactureName;
         }
