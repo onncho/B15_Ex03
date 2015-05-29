@@ -12,7 +12,8 @@ namespace Ex03.GarageLogic
         private Engine m_vehicleEngine;
 
 
-        public Vehicle(String i_vehicleName, String i_licenceNumber, float i_reaminingEng, float i_maxEnergy, List<Wheel> i_vehicleWheels, Engine i_vehicleSystem)
+        public Vehicle(String i_vehicleName, String i_licenceNumber, float i_reaminingEng, float i_maxEnergy, 
+            List<Wheel> i_vehicleWheels, Engine i_vehicleSystem)
         {
             this.m_vehicleName = i_vehicleName;
             this.m_licenceNumber = i_licenceNumber;
