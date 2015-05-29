@@ -46,15 +46,10 @@ namespace Ex03.GarageLogic
             set { m_licenceNumber = value; }
         }
 
-<<<<<<< HEAD
         public Engine getEngine
         {
             get { return m_vehicleEngine; }
         }
-
-=======
-        
->>>>>>> d53a8aa42d3386cdf953e4b20ce31b852acd5adc
 
         public static List<Wheel> createWheels(int i_numberOfWheels, string io_manufactureName, float io_maxAirPressure)
         {
