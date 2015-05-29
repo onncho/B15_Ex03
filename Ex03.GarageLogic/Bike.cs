@@ -8,7 +8,7 @@ namespace Ex03.GarageLogic
 {
     class Bike : Vehicle 
     {
-        enum BikeLicenseType { A, A2, AB, B1 };
+        public enum BikeLicenseType { A, A2, AB, B1 };
         BikeLicenseType m_bikeLicenseType;
 
         int m_bikeEngineVolume;
