@@ -4,14 +4,16 @@ using System.Text;
 
 namespace Ex03.GarageLogic
 {
-    class FuelSystem : Engine
-    {
-        enum FuelType { Soler, Octan95, Octan96, Octan98 };
 
+    /// <summary>
+    /// maybe we need to delete it
+    /// </summary>
+    class FuelEngine : Engine
+    {
         FuelType m_fuelType;
 
-        public FuelSystem(FuelType i_fuelType, float i_currentAmountFuel, float i_maxAmountOfFuel)
-            : base(i_maxAmountOfFuel, i_currentAmountFuel)
+        public FuelEngine(FuelType i_fuelType, float i_currentAmountFuel, float i_maxAmountOfFuel)
+            : base(i_maxAmountOfFuel, i_currentAmountFuel, i_fuelType)
         {
             m_fuelType = i_fuelType;
         }
