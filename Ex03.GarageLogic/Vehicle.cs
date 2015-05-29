@@ -4,26 +4,21 @@ using System.Text;
 
 namespace Ex03.GarageLogic
 {
-    // need to put here arguments but who gonna give it? 
     class Vehicle
     {
         private float m_reaminingEng;
         private String m_vehicleName, m_licenceNumber;
         private List<Wheel> m_vehicleWheels;
-        private Engine m_vehicleSystem;
+        private Engine m_vehicleEngine;
 
 
         public Vehicle(String i_vehicleName, String i_licenceNumber, float i_reaminingEng, float i_maxEnergy, List<Wheel> i_vehicleWheels, Engine i_vehicleSystem)
         {
             this.m_vehicleName = i_vehicleName;
             this.m_licenceNumber = i_licenceNumber;
-        
             this.m_reaminingEng = i_reaminingEng;
-
-
             this.m_vehicleWheels = i_vehicleWheels;
-
-            m_vehicleSystem = i_vehicleSystem;
+            m_vehicleEngine = i_vehicleSystem;
         }
 
         public float ReaminingEng
@@ -49,9 +44,5 @@ namespace Ex03.GarageLogic
             get { return m_licenceNumber; }
             set { m_licenceNumber = value; }
         }
-
-        
-      
-
     }
 }

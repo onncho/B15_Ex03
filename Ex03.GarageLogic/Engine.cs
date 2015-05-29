@@ -4,12 +4,12 @@ using System.Text;
 
 namespace Ex03.GarageLogic
 {
-    class System
+    class Engine
     {
         private float m_maxAmountOfEnergyType,
-            m_currentAmountOfEnergyType;
+                      m_currentAmountOfEnergyType;
 
-        public System(float i_maxAmount, float i_currentAmount) 
+        public Engine(float i_maxAmount, float i_currentAmount) 
         {
             m_maxAmountOfEnergyType = i_maxAmount;
             m_currentAmountOfEnergyType = i_currentAmount;
@@ -25,6 +25,7 @@ namespace Ex03.GarageLogic
                 fuelOperation(amountToFuel);
             }
 
+            //TODO = ERROR
             return energyUnderCapacity;
         }
 
