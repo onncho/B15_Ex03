@@ -51,6 +51,7 @@ namespace Ex03.GarageLogic
         public float maxAmountOfEnergy
         {
             get { return m_maxAmountOfEnergyType; }
+            set { m_maxAmountOfEnergyType = value; }
         }
 
         public float currentAmountOfEnergy

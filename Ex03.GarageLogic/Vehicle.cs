@@ -14,16 +14,18 @@ namespace Ex03.GarageLogic
         private string m_ownerName;
         private string m_ownerPhoneNumber;
 
-        public Vehicle(String i_vehicleName, String i_licenceNumber, float i_reaminingEng, float i_maxEnergy, 
-            List<Wheel> i_vehicleWheels, Engine i_vehicleSystem, string i_ownerName, string i_ownerPhoneNumber)
+        public Vehicle(String i_vehicleName, String i_licenceNumber, List<Wheel> i_vehicleWheels, 
+            Engine i_vehicleEngine)
         {
             m_vehicleName = i_vehicleName;
             m_licenceNumber = i_licenceNumber;
-            m_reaminingEng = i_reaminingEng;
             m_vehicleWheels = i_vehicleWheels;
-            m_vehicleEngine = i_vehicleSystem;
-            m_ownerName = i_ownerName;
-            m_ownerPhoneNumber = i_ownerPhoneNumber;
+            m_vehicleEngine = i_vehicleEngine;
+
+            m_reaminingEng = i_vehicleEngine.maxAmountOfEnergy - i_vehicleEngine.currentAmountOfEnergy;
+            
+            m_ownerName = InitVehicleDB.generateOwnerName();
+            m_ownerPhoneNumber = InitVehicleDB.generatePhoneNumber();
         }
 
         public float ReaminingEng
