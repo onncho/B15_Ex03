@@ -6,13 +6,26 @@ namespace Ex03.GarageLogic
 {
     class Engine
     {
+        public enum FuelType 
+        { 
+            Soler,
+            Octan95,
+            Octan96,
+            Octan98,
+            Electric
+        }
+
+        FuelType m_fuelType;
+
         private float m_maxAmountOfEnergyType,
                       m_currentAmountOfEnergyType;
+        
 
-        public Engine(float i_maxAmount, float i_currentAmount) 
+        public Engine(float i_maxAmount, float i_currentAmount, FuelType i_fuelType) 
         {
             m_maxAmountOfEnergyType = i_maxAmount;
             m_currentAmountOfEnergyType = i_currentAmount;
+            m_fuelType = i_fuelType;
         }
 
 
@@ -32,6 +45,16 @@ namespace Ex03.GarageLogic
         private void fuelOperation(float i_amountToFuel) 
         {
             m_currentAmountOfEnergyType += i_amountToFuel;
+        }
+
+        public float maxAmountOfEnergy
+        {
+            get { return m_maxAmountOfEnergyType; }
+        }
+
+        public float currentAmountOfEnergy
+        {
+            get { return m_currentAmountOfEnergyType; }
         }
 
     }
