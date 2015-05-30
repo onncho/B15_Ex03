@@ -11,15 +11,19 @@ namespace Ex03.GarageLogic
         private List<Wheel> m_vehicleWheels;
         private Engine m_vehicleEngine;
 
+        private string m_ownerName;
+        private string m_ownerPhoneNumber;
 
         public Vehicle(String i_vehicleName, String i_licenceNumber, float i_reaminingEng, float i_maxEnergy, 
-            List<Wheel> i_vehicleWheels, Engine i_vehicleSystem)
+            List<Wheel> i_vehicleWheels, Engine i_vehicleSystem, string i_ownerName, string i_ownerPhoneNumber)
         {
-            this.m_vehicleName = i_vehicleName;
-            this.m_licenceNumber = i_licenceNumber;
-            this.m_reaminingEng = i_reaminingEng;
-            this.m_vehicleWheels = i_vehicleWheels;
+            m_vehicleName = i_vehicleName;
+            m_licenceNumber = i_licenceNumber;
+            m_reaminingEng = i_reaminingEng;
+            m_vehicleWheels = i_vehicleWheels;
             m_vehicleEngine = i_vehicleSystem;
+            m_ownerName = i_ownerName;
+            m_ownerPhoneNumber = i_ownerPhoneNumber;
         }
 
         public float ReaminingEng

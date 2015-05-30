@@ -4,17 +4,18 @@ using System.Text;
 
 namespace Ex03.GarageLogic
 {
+    public enum FuelType
+    {
+        Soler,
+        Octan95,
+        Octan96,
+        Octan98,
+        Electric
+    }
+
     class Engine
     {
-        public enum FuelType 
-        { 
-            Soler,
-            Octan95,
-            Octan96,
-            Octan98,
-            Electric
-        }
-
+        
         FuelType m_fuelType;
 
         private float m_maxAmountOfEnergyType,
