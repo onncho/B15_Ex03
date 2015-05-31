@@ -40,21 +40,14 @@ namespace Ex03.GarageLogic
         }
 
         //Electric Bike
-        public Bike(BikeLicenseType i_bikeLiensetype, int i_bikeEngineVolume, string i_wheelMaufactureName, Engine i_engine, FuelType i_fuelBikeType)
+        public Bike(BikeLicenseType i_bikeLiensetype, int i_bikeEngineVolume, string i_wheelMaufactureName, Engine i_engine)
             : base("electric bike", InitVehicleDB.generateLicenseNumber(), Vehicle.createWheels(2, i_wheelMaufactureName, 31), i_engine)
         {
             m_bikeEngineVolume = i_bikeEngineVolume;
             m_bikeLicenseType = i_bikeLiensetype;
-
-            if (i_fuelBikeType == FuelType.Electric)
-            {
+            
                 m_FuelBikeType = FuelType.Electric;
                 i_engine.maxAmountOfEnergy = (float) 1.2;
-            }
-            else
-            {
-                //TODO ERROR IN CONSTRUCTOR
-            }
         }
 
     }
