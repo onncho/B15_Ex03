@@ -16,20 +16,69 @@ namespace Ex03.GarageLogic
 
     class Garage
     {
-        
-        // define collections for vehicles status
-        private List<Vehicle> m_inFixList;
-        private List<Vehicle> m_fixedList;
-        private List<Vehicle> m_paidList;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="i_licenseNumber"></param>
-        /// <param name="i_vehicleNewStatus"></param>
-        public void insertVehicleToGarage(string i_licenseNumber, VehicleStatus i_vehicleNewStatus)
+        struct carReport
         {
+            private Vehicle vec;
+            private string ownerName;
+            private string ownerPhone;
+            private VehicleStatus status;
+            private string license;
 
+            public void initStruct(Vehicle i_vehicle, string i_ownerName, string i_ownerPhone, string i_license)
+            {
+                vec = i_vehicle;
+                ownerName = i_ownerName;
+                ownerPhone = i_ownerPhone;
+                status = VehicleStatus.inFix;
+                license = i_license;
+            }
+
+
+            public Vehicle getVehicle
+            {
+                get { return vec; }
+            }
+
+            public string getOwnerName()
+            {
+                return ownerName;
+            }
+
+            public string getOwnerPhone()
+            {
+                return ownerPhone;
+            }
+            
+            public VehicleStatus changeStatus
+            {
+                get { return status; }
+                set { status = value; }
+            }
+
+            public string getSetLicense
+            {
+                get { return license; }
+                set { license = value; }
+            }
+
+        };
+
+        // define collections for vehicles status
+        Dictionary<string, carReport> m_listOfReports;
+        public Garage()
+        {
+            m_listOfReports = new Dictionary<string, carReport>();
+        }
+
+        public void insertVehicleToGarage(string i_licenseNumber, VehicleStatus i_vehicleNewStatus, Vehicle i_toAdd, string i_ownerName, string i_ownerPhone)
+        {
+            carReport carToAdd = new carReport();
+            carToAdd.initStruct(i_toAdd, i_ownerName, i_ownerPhone, i_licenseNumber);
+
+            bool isVehicaleExist = this.m_listOfReports.ContainsKey(i_licenseNumber);
+            if (isVehicaleExist)
+            {
+            }
         }
 
         /// <summary>
